@@ -1,0 +1,16 @@
+{
+    "name": "ning/transcoding",
+    "description": "Seven cattle cloud video transcoding",
+    "type": "php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ning",
+            "email": "2430114823@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "qiniu/php-sdk": "^7.1"
+    }
+}
