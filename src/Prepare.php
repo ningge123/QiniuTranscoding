@@ -1,8 +1,8 @@
 <?php
 
-namespace Ning\Transcoding;
+namespace CocoNing\Transcoding;
 
-use Ning\Transoding\Transcoding;
+use CocoNing\Transoding\Transcoding;
 
 class Prepare
 {

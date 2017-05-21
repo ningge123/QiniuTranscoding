@@ -1,5 +1,5 @@
 {
-    "name": "ning/transcoding",
+    "name": "coconing/transcoding",
     "description": "Seven cattle cloud video transcoding",
     "type": "php",
     "license": "MIT",
