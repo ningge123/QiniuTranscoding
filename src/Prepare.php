@@ -38,6 +38,7 @@ class Prepare
 
     /**
      * @param $key
+     * @return array
      */
     public function videoTranscoding($key)
     {
