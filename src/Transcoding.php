@@ -1,6 +1,6 @@
 <?php
 
-namespace CocoNing\Transoding;
+namespace CocoNing\Transcoding;
 
 use Ning\Transoding\Exceptions\TranscodingErrorException;
 use Qiniu\Auth;

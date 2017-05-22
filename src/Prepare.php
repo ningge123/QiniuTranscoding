@@ -2,7 +2,7 @@
 
 namespace CocoNing\Transcoding;
 
-use CocoNing\Transoding\Transcoding;
+use CocoNing\Transcoding\Transcoding;
 
 class Prepare
 {
