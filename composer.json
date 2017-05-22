@@ -1,7 +1,7 @@
 {
     "name": "coconing/transcoding",
     "description": "Seven cattle cloud video transcoding",
-    "type": "php",
+    "keywords" : ["qiniu", "transcoding"],
     "license": "MIT",
     "authors": [
         {
