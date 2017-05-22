@@ -45,11 +45,7 @@ class Transcoding
 
         $pfop = new PersistentFop($auth, $this->config['bucket'], $this->config['pipeline'], $this->config['notifyUrl']);
 
-        list($id, $err) = $pfop->execute($key, $this->config['fops']);
-
-        $this->id = $id;
-
-        $this->error = $err;
+        list($this->id, $this->error) = $pfop->execute($key, $this->config['fops']);
 
         return $this->response();
     }
