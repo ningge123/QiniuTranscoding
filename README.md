@@ -32,9 +32,23 @@ if ($err !== null) {
     var_dump($id);
 }
 ```
+你还可以这样:
+
+```
+$transcoding = new \CocoNing\Transcoding\Prepare();
+$transcoding->setConfig($config);
+```
 
 注意这里会返回一个数组,转码错误的话`$err`就不是`null`，`$id`类似这样的:z2.59219169e3d0041bf8086900,你可以根据这个`id`去查询转码状态
 
 ```
 http://api.qiniu.com/status/get/prefop?id=z2.59219169e3d0041bf8086900
 ```
+
+在`laravel`中使用:
+
+```
+ //provider
+ \CocoNing\Transcoding\TranscodingServiceProvider::class,
+```
+
