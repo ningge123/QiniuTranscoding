@@ -1,6 +1,6 @@
 # QiniuTranscoding
 
-七牛云视频转码。哈哈自己写的第一个轮子，紧张ing，很多代码有点糟糕。这个轮子的使用限制条件很多，已经上传到七牛的视频发起异步转码操作 .
+七牛云视频转码。很多代码有点糟糕。使用限制条件很多，已经上传到七牛的视频发起异步转码操作 .
 
 # 安装
 
@@ -37,6 +37,7 @@ if ($err !== null) {
 ```
 $transcoding = new \CocoNing\Transcoding\Prepare();
 $transcoding->setConfig($config);
+list($id, $err) = $transcoding->videoTranscoding('cocoyo.qlv');
 ```
 
 注意这里会返回一个数组,转码错误的话`$err`就不是`null`，`$id`类似这样的:z2.59219169e3d0041bf8086900,你可以根据这个`id`去查询转码状态
@@ -45,10 +46,22 @@ $transcoding->setConfig($config);
 http://api.qiniu.com/status/get/prefop?id=z2.59219169e3d0041bf8086900
 ```
 
-在`laravel`中使用:
+在`laravel`中使用，在你的`config/app.php`的`provider`添加如下：
 
 ```
- //provider
- \CocoNing\Transcoding\TranscodingServiceProvider::class,
+ CocoNing\Transcoding\TranscodingServiceProvider::class,
 ```
 
+# 使用:
+
+```
+$transcoding = app('transcoding');
+$transcoding->setConfig($config);
+```
+
+`laravel`你可以不需要传递`access_key`和` secret_key`,默认是取:
+
+```
+'access_key' => config('filesystems.disks.qiniu.access_key'),
+'secret_key' => config('filesystems.disks.qiniu.secret_key'),
+```

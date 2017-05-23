@@ -59,7 +59,7 @@ class Transcoding
             return $this->config;
         }
 
-        return array_merge($this->config,[
+        $this->config = array_merge($this->config,[
             'access_key' => config('filesystems.disks.qiniu.access_key'),
             'secret_key' => config('filesystems.disks.qiniu.secret_key'),
         ]);
